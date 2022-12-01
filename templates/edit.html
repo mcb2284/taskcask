@@ -1,0 +1,15 @@
+{% extends "index.html" %} {% block content %}
+<script src="{{ url_for('static', filename = 'edit.js') }}"></script>
+
+<script>
+  let username = {{ name | tojson }};
+  let task = {{ task | tojson }};
+  let date = {{ date | tojson }};
+  let priority = {{priority | tojson}}
+  let ref = {{ ref | tojson }};
+</script>
+
+<div class="container">
+  <div class="row" id="edit-tasks"></div>
+</div>
+{% endblock %}
